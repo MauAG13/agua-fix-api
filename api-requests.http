@@ -1,0 +1,42 @@
+### 1. Registrar un nuevo usuario (Auth)
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "name": "Mauricio Gómez",
+  "email": "mauricio@example.com",
+  "password": "password123",
+  "isNotificationEnabled": true
+}
+
+### 2. Login Exitoso
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "mauricio@example.com",
+  "password": "password123"
+}
+
+### 3. Login Fallido (Credenciales incorrectas -> 400 Bad Request)
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "email": "mauricio@example.com",
+  "password": "password_incorrecto"
+}
+
+### 4. Crear Reporte de Fuga de Agua (Guarda en BD y envía correo HTML)
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+  "address": "Av. Universidad 405, Col. Lomas del Campestre",
+  "description": "Fuga severa de agua potable saliendo de banqueta frente a la entrada principal",
+  "severity": "high",
+  "reporterPhone": "4771234567"
+}
+
+### 5. Listar Todos los Reportes Guardados
+GET http://localhost:3000/reports

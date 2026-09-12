@@ -1,0 +1,20 @@
+meta {
+  name: Create Report
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/reports
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "address": "Av. Universidad 405, Col. Lomas del Campestre",
+    "description": "Fuga severa de agua potable saliendo de banqueta frente a la entrada principal",
+    "severity": "high",
+    "reporterPhone": "4771234567"
+  }
+}
