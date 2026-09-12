@@ -1,10 +1,10 @@
-# Agua Fix API 💧
+# Agua Fix API
 
 API REST desarrollada en **NestJS v11** con **TypeScript**, **PostgreSQL**, **TypeORM** y **Nodemailer** para que los ciudadanos reporten fugas de agua en la vía pública y se envíen alertas por correo a la cuadrilla de mantenimiento.
 
 ---
 
-## 🚀 Arquitectura y Tecnologías
+## Arquitectura y Tecnologías
 
 - **Framework**: [NestJS 11](https://nestjs.com/) (TypeScript)
 - **Base de Datos**: PostgreSQL
@@ -17,7 +17,7 @@ API REST desarrollada en **NestJS v11** con **TypeScript**, **PostgreSQL**, **Ty
 
 ---
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 agua-fix-api/
@@ -64,7 +64,7 @@ agua-fix-api/
 
 ---
 
-## 🛠️ Puesta en Marcha
+## Puesta en Marcha
 
 ### 1. Iniciar PostgreSQL con Docker Compose
 ```bash
@@ -85,7 +85,7 @@ El servidor quedará disponible en: `http://localhost:3000`
 
 ---
 
-## 🐶 Colección de Bruno lista para usar
+## Colección de Bruno lista para usar
 
 El proyecto incluye la colección completa de **Bruno** en la carpeta `bruno/`.
 
@@ -204,7 +204,7 @@ Para usarla:
 
 ---
 
-## 🗄️ Comandos de Migraciones TypeORM
+## Comandos de Migraciones TypeORM
 
 - **Ejecutar migraciones pendientes**:
   ```bash
