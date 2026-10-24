@@ -139,3 +139,5 @@ Para usarla:
   ```
 - **Pipeline CI/CD**:
   En cada push a la rama `main`, el workflow `.github/workflows/docker-publish.yml` se autentica en Docker Hub usando los secretos `DOCKER_USER` y `DOCKER_PASSWORD`, construye la imagen y la publica con la etiqueta `latest`.
+
+## Prueba
