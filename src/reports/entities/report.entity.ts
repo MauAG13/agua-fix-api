@@ -22,6 +22,12 @@ export class Report {
   @Column({ type: 'varchar', length: 50 })
   reporterPhone: string;
 
+  @Column({ type: 'varchar', length: 500 })
+  photoUrl: string;
+
+  @Column({ type: 'varchar', length: 500, nullable: true })
+  repairPhotoUrl: string | null;
+
   @Column({ type: 'boolean', default: false })
   isResolved: boolean;
 

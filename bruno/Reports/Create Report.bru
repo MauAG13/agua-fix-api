@@ -6,15 +6,14 @@ meta {
 
 post {
   url: {{baseUrl}}/reports
-  body: json
+  body: multipart-form
   auth: none
 }
 
-body:json {
-  {
-    "address": "Av. Universidad 405, Col. Lomas del Campestre",
-    "description": "Fuga severa de agua potable saliendo de banqueta frente a la entrada principal",
-    "severity": "high",
-    "reporterPhone": "4771234567"
-  }
+body:multipart-form {
+  address: Av. Universidad 405, Col. Lomas del Campestre
+  description: Fuga severa de agua potable saliendo de banqueta frente a la entrada principal
+  severity: high
+  reporterPhone: 4771234567
+  photo: @file()
 }

@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { CreateReportDto } from './dto/create-report.dto';
 import { ReportsRepository } from './repositories/reports.repository';
 import { Report } from './entities/report.entity';
 
@@ -7,8 +6,8 @@ import { Report } from './entities/report.entity';
 export class ReportsService {
   constructor(private readonly reportsRepository: ReportsRepository) {}
 
-  async create(createReportDto: CreateReportDto): Promise<Report> {
-    return this.reportsRepository.create(createReportDto);
+  async create(reportData: Partial<Report>): Promise<Report> {
+    return this.reportsRepository.create(reportData);
   }
 
   async findAll(): Promise<Report[]> {

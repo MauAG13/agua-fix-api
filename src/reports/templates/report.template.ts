@@ -1,6 +1,6 @@
 import { CreateReportDto } from '../dto/create-report.dto';
 
-export function generateReportTemplate(dto: CreateReportDto): string {
+export function generateReportTemplate(dto: CreateReportDto, photoUrl: string): string {
   const severityColors: Record<string, { bg: string; text: string; label: string }> = {
     high: { bg: '#fee2e2', text: '#991b1b', label: 'ALTA' },
     medium: { bg: '#fef3c7', text: '#92400e', label: 'MEDIA' },
@@ -53,8 +53,17 @@ export function generateReportTemplate(dto: CreateReportDto): string {
             <td style="padding: 12px 16px; border-bottom: 1px solid #e5e7eb; font-size: 14px; line-height: 1.4;">${dto.description}</td>
           </tr>
           <tr>
-            <td style="padding: 12px 16px; font-weight: bold; color: #4b5563;">Teléfono de Contacto</td>
-            <td style="padding: 12px 16px; font-size: 14px;"><a href="tel:${dto.reporterPhone}" style="color: #0284c7; text-decoration: none; font-weight: bold;">${dto.reporterPhone}</a></td>
+            <td style="padding: 12px 16px; font-weight: bold; border-bottom: 1px solid #e5e7eb; color: #4b5563;">Teléfono de Contacto</td>
+            <td style="padding: 12px 16px; border-bottom: 1px solid #e5e7eb; font-size: 14px;"><a href="tel:${dto.reporterPhone}" style="color: #0284c7; text-decoration: none; font-weight: bold;">${dto.reporterPhone}</a></td>
+          </tr>
+          <tr>
+            <td style="padding: 12px 16px; font-weight: bold; color: #4b5563; vertical-align: top;">Fotografía de la Fuga</td>
+            <td style="padding: 12px 16px;">
+              <a href="${photoUrl}" target="_blank" style="text-decoration: none;">
+                <img src="${photoUrl}" alt="Foto de la fuga de agua" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid #d1d5db; display: block; margin-bottom: 6px;" />
+                <span style="font-size: 12px; color: #0284c7;">Ver imagen en tamaño completo</span>
+              </a>
+            </td>
           </tr>
         </table>
 
